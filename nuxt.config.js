@@ -1,11 +1,11 @@
 export default {
   target: 'static',
   router: {
-    base: '/coffee_bill_front_nuxt/'
+    base: '/action_tracker/'
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'coffee_bill_front_nuxt',
+    title: 'action_tracker',
     htmlAttrs: {
       lang: 'en'
     },

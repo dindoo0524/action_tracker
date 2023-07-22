@@ -1,4 +1,4 @@
-# coffee_bill_front_nuxt
+# action_tracker
 
 ## Build Setup
 
