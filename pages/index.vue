@@ -33,9 +33,13 @@
     </section>
 
     <section class="flex justify-center mt-20px">
-      <router-link class="button-style bg-primary text-white" to="/main"
-        >START</router-link
-      >
+      <!--   TODO: 로그인이 되어있으면 strat, 없으면 로그인 화면 이동   -->
+      <!--      <router-link class="button-style bg-primary text-white" to="/main"-->
+      <!--        >START</router-link-->
+      <!--      >-->
+      <button class="bg-primary text-white" @click.stop="onClickStart">
+        START
+      </button>
     </section>
   </div>
 </template>
@@ -45,5 +49,14 @@ import { Component } from 'vue-property-decorator'
 import Vue from 'vue'
 
 @Component
-export default class HomePage extends Vue {}
+export default class HomePage extends Vue {
+  onClickStart() {
+    const hasSession = false
+    if (hasSession) {
+      this.$router.push({ name: 'main' })
+    } else {
+      this.$router.push({ name: 'auth-login' })
+    }
+  }
+}
 </script>

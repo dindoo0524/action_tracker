@@ -4,10 +4,7 @@
     @keyup="onKeyUp"
     @click="onClickDialogBackground"
   >
-    <div
-      class="dialog-container p-20px bg-white rounded-[8px] min-w-[200px]"
-      :class="dialogClassName"
-    >
+    <div class="dialog-container p-20px bg-white rounded-[8px] min-w-[200px]">
       <header
         v-if="!$slots['header']"
         class="flex justify-between font-bold text-[18px]"
@@ -68,8 +65,8 @@ import Vue from 'vue'
 @Component
 export default class DialogTemplate extends Vue {
   private name: String = 'DialogTemplate'
-  @Prop({ type: String, required: false }) private dialogName?: string =
-    'default'
+  // @Prop({ type: String, required: false }) private dialogName?: string =
+  //   'default'
 
   @Prop({ type: String, required: false, default: '알림' })
   private title?: string
@@ -88,14 +85,14 @@ export default class DialogTemplate extends Vue {
 
   @Prop({ type: Boolean, required: false, default: true })
   private cancelable?: boolean
-
-  /**
-   * dialog 네임을 기반으로 dialog 고유의 클래스명을 반환한다.
-   * 예) image-upload-dialog-container 반환
-   */
-  get dialogClassName(): string {
-    return this.dialogName + '-dialog-container'
-  }
+  //
+  // /**
+  //  * dialog 네임을 기반으로 dialog 고유의 클래스명을 반환한다.
+  //  * 예) image-upload-dialog-container 반환
+  //  */
+  // get dialogClassName(): string {
+  //   return this.dialogName + '-dialog-container'
+  // }
 
   created() {
     this.$nuxt.$on('dialog_close', this.close)

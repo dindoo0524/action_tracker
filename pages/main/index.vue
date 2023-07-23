@@ -25,7 +25,10 @@
               <div class="w-10px h-12px bg-pink-300 mr-4px"></div>
               <div class="w-10px h-12px bg-pink-300 mr-4px"></div>
               <div class="w-10px h-12px bg-pink-300 mr-4px"></div>
-              <div class="w-10px h-12px bg-pink-300 mr-4px"></div>
+              <div
+                v-if="isSuccess"
+                class="w-10px h-12px bg-pink-500 mr-4px"
+              ></div>
             </div>
           </li>
           <li>
@@ -92,10 +95,12 @@ export default class MainPage extends Vue {
   private name: string = 'MainPage'
   private formatCurrentDate: string = ''
   private formatCurrentTime: string = ''
+  private isSuccess: boolean = false
 
   mounted() {
     const isSuccess = this.$route.query.success
     if (isSuccess === 'yes') {
+      this.isSuccess = true
       new CongratulationsDialog({
         parent: this,
         propsData: {},

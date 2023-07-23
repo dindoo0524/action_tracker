@@ -20,7 +20,7 @@
       </div>
     </div>
     <footer class="flex justify-between">
-      <button class="bg-primary text-white" @click.stop="onLogin">
+      <button class="bg-primary text-white" @click.stop="onTempLogin">
         로그인
       </button>
       <router-link class="bg-white text-primary border-0" to="signup"
@@ -37,8 +37,8 @@ import AuthApi from '~/lib/api/auth/authApi'
 
 @Component
 export default class Login extends mixins(ApiComponent) {
-  private nickname: string = 'yammy'
-  private password: string = '0000'
+  private nickname: string = ''
+  private password: string = ''
 
   async onLogin() {
     try {
@@ -54,6 +54,12 @@ export default class Login extends mixins(ApiComponent) {
       await this.$router.push({ name: 'bills' })
     } catch (e) {
       // console.error(e)
+    }
+  }
+
+  onTempLogin() {
+    if (this.password === '0000') {
+      this.$router.push({ name: 'main' })
     }
   }
 }
