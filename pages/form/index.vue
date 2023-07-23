@@ -42,7 +42,7 @@ export default class Form extends Vue {
     [
       '30min meditation',
       '25min love myself',
-      '20min write thanks-diary',
+      '20min keep a thanks-diary',
       '5min super power pose',
     ],
     [

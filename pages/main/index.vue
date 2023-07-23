@@ -58,7 +58,7 @@
       </section>
     </section>
     <!--    body character section-->
-    <section class="mt-16px">
+    <section class="mt-24px">
       <div
         :style="`background-image:url('https://cdn.liveklass.com/common/1690043312259.jpeg');`"
         class="w-full h-[200px] bg-no-repeat bg-contain bg-center"
@@ -71,13 +71,29 @@
         <div class="bg-yellow-300 py-10px px-28px rounded-[8px]">슈퍼진주</div>
       </section>
       <!--      action-stop button section-->
-      <section class="flex mt-20px flex-1 flex-col justify-end items-center">
+      <section class="flex mt-20px flex-1 justify-evenly items-end">
+        <button
+          class="text-center p-10px rounded-[8px] leading-[10px] flex-col justify-center"
+          @click.stop="onClickShare"
+        >
+          <FontAwesomeIcon icon="fa-solid fa-share-nodes" size="2x" />
+          <div class="text-[10px] leading-normal">Share</div>
+        </button>
+
         <router-link
           class="px-16px py-24px text-3xl rounded-full border-4 border-black bg-yellow-300 w-[100px] h-[100px] leading-[10px] flex-col justify-center"
           to="/form"
         >
           <FontAwesomeIcon icon="fa-solid fa-plus" />🍗
           <span class="text-[10px] leading-normal">Action-Step</span>
+        </router-link>
+
+        <router-link
+          class="text-center p-10px rounded-[8px] leading-[10px] flex-col justify-center"
+          to="/history"
+        >
+          <FontAwesomeIcon icon="fa-solid fa-scroll" size="2x" />
+          <div class="text-[10px] leading-normal">History</div>
         </router-link>
       </section>
     </section>
@@ -111,6 +127,21 @@ export default class MainPage extends Vue {
       this.formatCurrentDate = moment(new Date()).format('YYYY.MM.DD')
       this.formatCurrentTime = moment(new Date()).format('HH:mm:ss A')
     }, 1000)
+  }
+  onClickShare() {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: '공유할 제목',
+          text: '공유할 내용',
+          url: 'https://example.com', // 공유할 URL
+        })
+        .then(() => console.log('성공적으로 공유했습니다.'))
+        .catch((error) => console.error('공유에 실패했습니다:', error))
+    } else {
+      console.log('휴대폰 내장 공유 기능이 지원되지 않는 브라우저입니다.')
+      // 대체로 별도의 공유 기능을 제공하거나 안내 메시지를 표시하는 로직 추가 가능
+    }
   }
 }
 </script>

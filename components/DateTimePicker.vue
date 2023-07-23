@@ -18,5 +18,12 @@ import Vue from 'vue'
 export default class DateTimePicker extends Vue {
   private selectedDate: string = ''
   private dateError: boolean = false
+
+  // submit() {
+  //   console.log(this.selectedDate)
+  //   const dateTimeValue = new Date(this.selectedDate)
+  //   console.log(dateTimeValue)
+  //   console.log(dateTimeValue.toISOString())
+  // }
 }
 </script>
