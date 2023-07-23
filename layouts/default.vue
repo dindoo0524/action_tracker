@@ -1,8 +1,8 @@
 <template>
   <div class="bg-gray-100 h-[100vh] flex justify-center items-center flex-col">
-    <span class="text-[30px] z-10">ACTION TRACKER</span>
+    <span class="text-[30px] z-10 hidden md:block">ACTION TRACKER</span>
     <div
-      class="bg-white w-full h-full md:max-w-[400px] md:h-[80vh] md:min-h-[600px] rounded-[8px] drop-shadow px-30px pt-[120px] pb-[30px] md:pt-30px flex"
+      class="bg-white w-full h-full md:max-w-[400px] md:h-[80vh] md:min-h-[600px] rounded-[8px] drop-shadow px-30px pb-[30px] pt-30px flex"
     >
       <Nuxt />
     </div>

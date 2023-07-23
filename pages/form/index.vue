@@ -5,10 +5,11 @@
 
     <SelectableItemList :list="selectedList"></SelectableItemList>
 
+    <DateTimePicker class="mt-4"></DateTimePicker>
     <div class="relative mt-4">
       <textarea
         v-model="memo"
-        class="w-[300px] h-[80px] px-4 py-2 border-2 border-gray-300 rounded-[8px] resize-none focus:outline-none focus:border-primary"
+        class="w-[300px] h-[50px] px-4 py-2 border-2 border-gray-300 rounded-[8px] resize-none focus:outline-none focus:border-primary"
         placeholder="Memo"
       ></textarea>
     </div>
@@ -30,8 +31,8 @@ import Vue from 'vue'
 import moment from 'moment'
 
 @Component
-export default class MainPage extends Vue {
-  private name: string = 'MainPage'
+export default class Form extends Vue {
+  private name: string = 'FormPage'
   private formatCurrentDate: string = ''
   private formatCurrentTime: string = ''
   private selectedTypeIndex: number = 0

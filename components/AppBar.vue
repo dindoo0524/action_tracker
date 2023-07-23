@@ -12,7 +12,7 @@
     </section>
     <!-- 오른쪽 actions 영역  -->
     <section class="w-[40px]">
-      <FontAwesomeIcon icon="fa-solid fa-bars" size="2x" />
+      <!--      <FontAwesomeIcon icon="fa-solid fa-bars" size="2x" />-->
     </section>
   </div>
 </template>
