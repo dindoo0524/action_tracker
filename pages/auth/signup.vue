@@ -33,7 +33,7 @@ import ApiComponent from '~/lib/ApiComponent.vue'
 import AuthApi from '~/lib/api/auth/authApi'
 
 @Component
-export default class Login extends mixins(ApiComponent) {
+export default class Signup extends mixins(ApiComponent) {
   private nickname: string = ''
   private password: string = ''
 

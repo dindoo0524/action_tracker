@@ -24,6 +24,10 @@ button {
   @apply px-16px py-8px rounded-[8px] text-12px;
 }
 
+.button-style {
+  @apply px-16px py-8px rounded-[8px] text-12px;
+}
+
 .type-badge {
   @apply w-[40px] py-[5px] text-center rounded-full text-white;
 }
