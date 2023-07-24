@@ -59,7 +59,7 @@ export default {
 
   // server setup
   server: {
-    // host: '0.0.0.0', // 외부 IP에서 접근 가능하도록 설정
+    host: '0.0.0.0', // 외부 IP에서 접근 가능하도록 설정
     port: 4000
   }
 }
