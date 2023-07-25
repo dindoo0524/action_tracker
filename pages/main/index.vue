@@ -109,9 +109,9 @@ import CongratulationsDialog from '~/components/dialog/CongratulationsDialog.vue
 @Component
 export default class MainPage extends Vue {
   private name: string = 'MainPage'
-  private formatCurrentDate: string = ''
-  private formatCurrentTime: string = ''
-  private isSuccess: boolean = false
+  public formatCurrentDate: string = ''
+  public formatCurrentTime: string = ''
+  public isSuccess: boolean = false
 
   mounted() {
     const isSuccess = this.$route.query.success
@@ -119,7 +119,7 @@ export default class MainPage extends Vue {
       this.isSuccess = true
       new CongratulationsDialog({
         parent: this,
-        propsData: {},
+        propsData: {}
       }).show()
     }
     // Update currentTime every second using setInterval
@@ -134,7 +134,7 @@ export default class MainPage extends Vue {
         .share({
           title: '공유할 제목',
           text: '공유할 내용',
-          url: 'https://example.com', // 공유할 URL
+          url: 'https://example.com' // 공유할 URL
         })
         .then(() => console.log('성공적으로 공유했습니다.'))
         .catch((error) => console.error('공유에 실패했습니다:', error))
