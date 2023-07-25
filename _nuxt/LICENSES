@@ -26,11 +26,6 @@
   */
 
 
-//! moment.js
-
-//! moment.js locale configuration
-
-
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -47,11 +42,10 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 
-/*!
-  * vue-router v3.5.4
-  * (c) 2022 Evan You
-  * @license MIT
-  */
+//! moment.js
+
+//! moment.js locale configuration
+
 
 /*!
  * Vue.js v2.7.14
