@@ -135,7 +135,7 @@ export default class MainPage extends Vue {
         .share({
           title: '공유할 제목',
           text: '공유할 내용',
-          url: 'https://example.com' // 공유할 URL
+          url: 'https://cdn.liveklass.com/common/1690043312259.jpeg' // 공유할 URL
         })
         .then(() => console.log('성공적으로 공유했습니다.'))
         .catch((error) => console.error('공유에 실패했습니다:', error))
