@@ -129,6 +129,7 @@ export default class MainPage extends Vue {
     }, 1000)
   }
   onClickShare() {
+    alert(navigator.share)
     if (navigator.share) {
       navigator
         .share({
@@ -139,6 +140,7 @@ export default class MainPage extends Vue {
         .then(() => console.log('성공적으로 공유했습니다.'))
         .catch((error) => console.error('공유에 실패했습니다:', error))
     } else {
+      alert('휴대폰 내장 공유 기능이 지원되지 않는 브라우저입니다.')
       console.log('휴대폰 내장 공유 기능이 지원되지 않는 브라우저입니다.')
       // 대체로 별도의 공유 기능을 제공하거나 안내 메시지를 표시하는 로직 추가 가능
     }
